@@ -29,8 +29,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push
-        id: docker_build
+      - name: Build and push smoking
+        id: docker_build_smoking
         uses: docker/build-push-action@v2
         with:
           context: ./smoking
@@ -38,8 +38,8 @@ jobs:
           push: true
           tags: nxthongbk/aiservice-smoking:latest
 
-      - name: Build and push
-        id: docker_build
+      - name: Build and push hardhat
+        id: docker_build_hardhat
         uses: docker/build-push-action@v2
         with:
           context: ./hardhat
