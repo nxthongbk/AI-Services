@@ -9,7 +9,7 @@ from PIL import Image
 app = Flask(__name__)
 
 # Load YOLO model
-model = YOLO("models/best.pt")
+model = YOLO("models/yolo8n_hardhat_no-hardhat.pt")
 
 @app.route("/predict", methods=["POST"])
 def predict():
