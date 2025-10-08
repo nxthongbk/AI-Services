@@ -35,8 +35,9 @@ jobs:
         with:
           context: ./smoking
           file: ./smoking/Dockerfile
+          platforms: linux/amd64,linux/arm64/v8
           push: true
-          tags: nxthongbk/aiservice-smoking:latest
+          tags: nxthongbk/aiservice-smoking:adlink
 
       - name: Build and push hardhat
         id: docker_build_hardhat
@@ -44,8 +45,9 @@ jobs:
         with:
           context: ./hardhat
           file: ./hardhat/Dockerfile
+          platforms: linux/amd64,linux/arm64/v8
           push: true
-          tags: nxthongbk/aiservice-hardhat:latest
+          tags: nxthongbk/aiservice-hardhat:adlink
 
   # Deploy:
   #   if: |
